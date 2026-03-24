@@ -6,7 +6,6 @@ $cv = [
   "phone"     => "+20 150 507 2831",
   "location"  => "Egypt",
   "github"    => "github.com/nourallamss",
-  "PetWeb"    => "https://pethub.great-site.net",
   "portfolio" => "nourallam.dev",
   "summary"   => "Ambitious developer & communicator who bridges the gap between elegant code and human connection. I architect digital experiences as fluidly as I resolve customer conflicts — with precision, empathy, and zero hesitation under pressure.",
   "experience"=>[
@@ -440,9 +439,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;
       ['☎',  $cv['phone'],     'tel:'.preg_replace('/\s/','',$cv['phone']),        'CALL NOW',     'copy'],
       ['⌖',  $cv['location'],  'https://maps.google.com/?q='.urlencode($cv['location']),'VIEW MAP','link'],
       ['⌥',  $cv['github'],    'https://'.$cv['github'],                           'GITHUB →',     'link'],
-      ['🌐',  $cv['PetWeb'],    'https://'.$cv['PetWeb'],                           'PetWeb →',     'link'],
-
-      ];
+    ];
     foreach($cons as [$icon,$val,$href,$badge,$action]):
     ?>
     <a class="cpill"
