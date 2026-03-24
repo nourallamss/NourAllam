@@ -440,7 +440,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;
       ['☎',  $cv['phone'],     'tel:'.preg_replace('/\s/','',$cv['phone']),        'CALL NOW',     'copy'],
       ['⌖',  $cv['location'],  'https://maps.google.com/?q='.urlencode($cv['location']),'VIEW MAP','link'],
       ['⌥',  $cv['github'],    'https://'.$cv['github'],                           'GITHUB →',     'link'],
-      ['⌥',  $cv['PetWeb'],    'https://'.$cv['PetWeb'],                           'PetWeb →',     'link'],
+      ['🌐',  $cv['PetWeb'],    'https://'.$cv['PetWeb'],                           'PetWeb →',     'link'],
 
       ];
     foreach($cons as [$icon,$val,$href,$badge,$action]):
