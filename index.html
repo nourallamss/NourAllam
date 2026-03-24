@@ -1,36 +1,8 @@
-<?php
-$cv = [
-  "name"      => "NourAllam",
-  "title"     => "Web Developer & Customer Service Specialist",
-  "email"     => "nourallam4100@gmail.com",
-  "phone"     => "+20 150 507 2831",
-  "location"  => "Egypt",
-  "github"    => "https://github.com/nourallamss",
-  "portfolio" => "nourallam.dev",
-  "summary"   => "Ambitious developer & communicator who bridges the gap between elegant code and human connection. I architect digital experiences as fluidly as I resolve customer conflicts — with precision, empathy, and zero hesitation under pressure.",
-  "experience"=>[
-    ["role"=>"Freelance Web Developer","company"=>"Self-Employed","period"=>"2024 – Present","color"=>"#00ffe7",
-     "points"=>["Built production-grade apps with PHP, Laravel & React","Designed pixel-perfect UIs with modern CSS & JavaScript","Integrated MySQL databases and RESTful APIs","Deployed projects on cloud VPS environments"]],
-  ],
-  "education"=>[
-    ["degree"=>"High School Diploma (In Progress)","school"=>"Brilliance American School","period"=>"2023–Present","note"=>"SAT: 820 · ACT Trials in Progress","color"=>"#ff6b9d"],
-  ],
-  "skills"=>[
-    ["n"=>"PHP & Laravel","p"=>85,"c"=>"#7c6dfa"],["n"=>"React & RN","p"=>80,"c"=>"#00ffe7"],
-    ["n"=>"HTML/CSS/JS","p"=>92,"c"=>"#ff6b9d"],["n"=>"MySQL","p"=>75,"c"=>"#ffc940"],
-    ["n"=>"Communication","p"=>97,"c"=>"#00ffe7"],["n"=>"Problem Solving","p"=>90,"c"=>"#7c6dfa"],
-    ["n"=>"Arduino/IoT","p"=>62,"c"=>"#ffc940"],["n"=>"Git & DevOps","p"=>70,"c"=>"#ff6b9d"],
-  ],
-  "tags"=>["Fast Learner","Active Listening","Teamwork","Customer Empathy","REST APIs","Time Management","Adaptability","Logical Thinking","Arduino","React Native"],
-  "langs"=>[["l"=>"Arabic","lv"=>"Native","p"=>100,"c"=>"#7c6dfa"],["l"=>"English","lv"=>"Professional","p"=>85,"c"=>"#00ffe7"]],
-];
-$init=substr(implode('',array_map(fn($w)=>strtoupper($w[0]),array_filter(explode(' ',$cv['name'])))),0,2);
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title><?=htmlspecialchars($cv['name'])?> · Portfolio CV</title>
+<title>NourAllam · Portfolio CV</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -382,7 +354,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;
 
 <!-- LOADER -->
 <div id="loader">
-  <div class="ld-logo glitch" data-text="<?=htmlspecialchars($cv['name'])?>"><?=htmlspecialchars($cv['name'])?></div>
+  <div class="ld-logo glitch" data-text="NourAllam">NourAllam</div>
   <div class="ld-sub">LOADING PORTFOLIO CV</div>
   <div class="ld-track"><div class="ld-fill" id="lbar"></div></div>
   <div class="ld-pct" id="lpct">0%</div>
@@ -393,11 +365,10 @@ body::before{content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-eyebrow"><span>■</span> PORTFOLIO · CV · <?=date('Y')?></div>
+    <div class="hero-eyebrow"><span>■</span> PORTFOLIO · CV · 2026</div>
     <h1 class="hero-name">
-      <?php $parts=explode(' ',$cv['name'],2);?>
-      <span class="n1"><?=htmlspecialchars($parts[0]??'')?></span>
-      <span class="n2"><?=htmlspecialchars($parts[1]??'')?></span>
+            <span class="n1">NourAllam</span>
+      <span class="n2"></span>
     </h1>
     <div class="hero-divider"><div class="hd-line"></div><div class="hd-diamond"></div></div>
     <div class="hero-title-wrap">
@@ -406,7 +377,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;
       </div>
     </div>
     <div class="hero-bottom">
-      <p class="hero-summary"><?=htmlspecialchars($cv['summary'])?></p>
+      <p class="hero-summary">Ambitious developer &amp; communicator who bridges the gap between elegant code and human connection. I architect digital experiences as fluidly as I resolve customer conflicts — with precision, empathy, and zero hesitation under pressure.</p>
       <div class="hero-stats">
         <div class="stat"><div class="stat-num" data-count="3">0</div><div class="stat-lbl">Years<br>Building</div></div>
         <div class="stat"><div class="stat-num" data-count="10">0</div><div class="stat-lbl">Projects<br>Shipped</div></div>
@@ -419,46 +390,98 @@ body::before{content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;
   <!-- PROFILE CARD -->
   <div class="profile-card corner-box" id="pcard">
     <div class="profile-card-shimmer"></div>
-    <div class="pc-avatar"><span class="pc-letters"><?=htmlspecialchars($init)?></span></div>
+    <div class="pc-avatar"><span class="pc-letters">N</span></div>
     <div class="pc-info">
-      <div class="pc-name glitch" data-text="<?=htmlspecialchars($cv['name'])?>"><?=htmlspecialchars($cv['name'])?></div>
-      <div class="pc-role"><?=htmlspecialchars($cv['title'])?></div>
+      <div class="pc-name glitch" data-text="NourAllam">NourAllam</div>
+      <div class="pc-role">Web Developer &amp; Customer Service Specialist</div>
       <div class="pc-tags">
-        <?php foreach(array_slice($cv['tags'],0,5) as $t): ?>
-        <span class="pc-tag"><?=htmlspecialchars($t)?></span>
-        <?php endforeach; ?>
-      </div>
+                <span class="pc-tag">Fast Learner</span>
+                <span class="pc-tag">Active Listening</span>
+                <span class="pc-tag">Teamwork</span>
+                <span class="pc-tag">Customer Empathy</span>
+                <span class="pc-tag">REST APIs</span>
+              </div>
     </div>
   </div>
 
   <!-- CONTACT -->
   <div class="contact-row sec-anim" id="cstrip">
-    <?php
-    $cons = [
-      ['✉',  $cv['email'],     'mailto:'.$cv['email'],                            'SEND EMAIL',   'copy'],
-      ['☎',  $cv['phone'],     'tel:'.preg_replace('/\s/','',$cv['phone']),        'CALL NOW',     'copy'],
-      ['⌖',  $cv['location'],  'https://maps.google.com/?q='.urlencode($cv['location']),'VIEW MAP','link'],
-      ['⌥',  $cv['github'],    'https://'.$cv['github'],                           'GITHUB →',     'link'],
-    ];
-    foreach($cons as [$icon,$val,$href,$badge,$action]):
-    ?>
-    <a class="cpill"
-       href="<?=htmlspecialchars($href)?>"
-       target="<?=($action==='link'?'_blank':'_self')?>"
+        <a class="cpill"
+       href="mailto:nourallam4100@gmail.com"
+       target="_self"
        rel="noopener noreferrer"
-       data-copy="<?=htmlspecialchars($val)?>"
-       data-action="<?=$action?>">
+       data-copy="nourallam4100@gmail.com"
+       data-action="copy">
       <span class="pulse"></span>
-      <span class="ci"><?=$icon?></span>
+      <span class="ci">✉</span>
       <span class="clabel">
-        <span class="ct"><?=htmlspecialchars($val)?></span>
-        <span class="ct2"><?=htmlspecialchars($badge)?></span>
+        <span class="ct">nourallam4100@gmail.com</span>
+        <span class="ct2">SEND EMAIL</span>
       </span>
-      <span class="cbadge"><?=$action==='link'?'↗ OPEN':'⎘ COPY'?></span>
-      <span class="tip"><?=htmlspecialchars($badge)?></span>
+      <span class="cbadge">⎘ COPY</span>
+      <span class="tip">SEND EMAIL</span>
     </a>
-    <?php endforeach; ?>
-  </div>
+        <a class="cpill"
+       href="tel:+201505072831"
+       target="_self"
+       rel="noopener noreferrer"
+       data-copy="+20 150 507 2831"
+       data-action="copy">
+      <span class="pulse"></span>
+      <span class="ci">☎</span>
+      <span class="clabel">
+        <span class="ct">+20 150 507 2831</span>
+        <span class="ct2">CALL NOW</span>
+      </span>
+      <span class="cbadge">⎘ COPY</span>
+      <span class="tip">CALL NOW</span>
+    </a>
+        <a class="cpill"
+       href="https://maps.google.com/?q=Egypt"
+       target="_blank"
+       rel="noopener noreferrer"
+       data-copy="Egypt"
+       data-action="link">
+      <span class="pulse"></span>
+      <span class="ci">⌖</span>
+      <span class="clabel">
+        <span class="ct">Egypt</span>
+        <span class="ct2">VIEW MAP</span>
+      </span>
+      <span class="cbadge">↗ OPEN</span>
+      <span class="tip">VIEW MAP</span>
+    </a>
+        <a class="cpill"
+       href="https://github.com/nourallamss"
+       target="_blank"
+       rel="noopener noreferrer"
+       data-copy="github.com/nourallamss"
+       data-action="link">
+      <span class="pulse"></span>
+      <span class="ci">⌥</span>
+      <span class="clabel">
+        <span class="ct">github.com/nourallamss</span>
+        <span class="ct2">GITHUB →</span>
+      </span>
+      <span class="cbadge">↗ OPEN</span>
+      <span class="tip">GITHUB →</span>
+    </a>
+        <a class="cpill"
+       href="https://pethub.great-site.net"
+       target="_blank"
+       rel="noopener noreferrer"
+       data-copy="pethub.great-site.net"
+       data-action="link">
+      <span class="pulse"></span>
+      <span class="ci">🌐</span>
+      <span class="clabel">
+        <span class="ct">pethub.great-site.net</span>
+        <span class="ct2">PetWeb →</span>
+      </span>
+      <span class="cbadge">↗ OPEN</span>
+      <span class="tip">PetWeb →</span>
+    </a>
+      </div>
   <div id="toast">⎘ COPIED TO CLIPBOARD</div>
 
   <!-- SKILLS -->
@@ -469,24 +492,99 @@ body::before{content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;
       <div class="sec-line"></div>
     </div>
     <div class="skills-wrap" id="skillgrid">
-      <?php foreach($cv['skills'] as $s): ?>
-      <div class="sk-card corner-box" style="--sc:<?=$s['c']?>">
-        <div class="sk-glow" style="background:<?=$s['c']?>"></div>
+            <div class="sk-card corner-box" style="--sc:#7c6dfa">
+        <div class="sk-glow" style="background:#7c6dfa"></div>
         <div class="sk-top">
-          <span class="sk-name"><?=htmlspecialchars($s['n'])?></span>
-          <span class="sk-pct" style="color:<?=$s['c']?>"><?=$s['p']?>%</span>
+          <span class="sk-name">PHP &amp; Laravel</span>
+          <span class="sk-pct" style="color:#7c6dfa">85%</span>
         </div>
         <div class="sk-track">
-          <div class="sk-fill" data-pct="<?=$s['p']?>" style="background:<?=$s['c']?>;color:<?=$s['c']?>;box-shadow:0 0 12px <?=$s['c']?>"></div>
+          <div class="sk-fill" data-pct="85" style="background:#7c6dfa;color:#7c6dfa;box-shadow:0 0 12px #7c6dfa"></div>
         </div>
       </div>
-      <?php endforeach; ?>
-    </div>
+            <div class="sk-card corner-box" style="--sc:#00ffe7">
+        <div class="sk-glow" style="background:#00ffe7"></div>
+        <div class="sk-top">
+          <span class="sk-name">React &amp; RN</span>
+          <span class="sk-pct" style="color:#00ffe7">80%</span>
+        </div>
+        <div class="sk-track">
+          <div class="sk-fill" data-pct="80" style="background:#00ffe7;color:#00ffe7;box-shadow:0 0 12px #00ffe7"></div>
+        </div>
+      </div>
+            <div class="sk-card corner-box" style="--sc:#ff6b9d">
+        <div class="sk-glow" style="background:#ff6b9d"></div>
+        <div class="sk-top">
+          <span class="sk-name">HTML/CSS/JS</span>
+          <span class="sk-pct" style="color:#ff6b9d">92%</span>
+        </div>
+        <div class="sk-track">
+          <div class="sk-fill" data-pct="92" style="background:#ff6b9d;color:#ff6b9d;box-shadow:0 0 12px #ff6b9d"></div>
+        </div>
+      </div>
+            <div class="sk-card corner-box" style="--sc:#ffc940">
+        <div class="sk-glow" style="background:#ffc940"></div>
+        <div class="sk-top">
+          <span class="sk-name">MySQL</span>
+          <span class="sk-pct" style="color:#ffc940">75%</span>
+        </div>
+        <div class="sk-track">
+          <div class="sk-fill" data-pct="75" style="background:#ffc940;color:#ffc940;box-shadow:0 0 12px #ffc940"></div>
+        </div>
+      </div>
+            <div class="sk-card corner-box" style="--sc:#00ffe7">
+        <div class="sk-glow" style="background:#00ffe7"></div>
+        <div class="sk-top">
+          <span class="sk-name">Communication</span>
+          <span class="sk-pct" style="color:#00ffe7">97%</span>
+        </div>
+        <div class="sk-track">
+          <div class="sk-fill" data-pct="97" style="background:#00ffe7;color:#00ffe7;box-shadow:0 0 12px #00ffe7"></div>
+        </div>
+      </div>
+            <div class="sk-card corner-box" style="--sc:#7c6dfa">
+        <div class="sk-glow" style="background:#7c6dfa"></div>
+        <div class="sk-top">
+          <span class="sk-name">Problem Solving</span>
+          <span class="sk-pct" style="color:#7c6dfa">90%</span>
+        </div>
+        <div class="sk-track">
+          <div class="sk-fill" data-pct="90" style="background:#7c6dfa;color:#7c6dfa;box-shadow:0 0 12px #7c6dfa"></div>
+        </div>
+      </div>
+            <div class="sk-card corner-box" style="--sc:#ffc940">
+        <div class="sk-glow" style="background:#ffc940"></div>
+        <div class="sk-top">
+          <span class="sk-name">Arduino/IoT</span>
+          <span class="sk-pct" style="color:#ffc940">62%</span>
+        </div>
+        <div class="sk-track">
+          <div class="sk-fill" data-pct="62" style="background:#ffc940;color:#ffc940;box-shadow:0 0 12px #ffc940"></div>
+        </div>
+      </div>
+            <div class="sk-card corner-box" style="--sc:#ff6b9d">
+        <div class="sk-glow" style="background:#ff6b9d"></div>
+        <div class="sk-top">
+          <span class="sk-name">Git &amp; DevOps</span>
+          <span class="sk-pct" style="color:#ff6b9d">70%</span>
+        </div>
+        <div class="sk-track">
+          <div class="sk-fill" data-pct="70" style="background:#ff6b9d;color:#ff6b9d;box-shadow:0 0 12px #ff6b9d"></div>
+        </div>
+      </div>
+          </div>
     <div class="tags-cloud" style="margin-top:24px">
-      <?php foreach($cv['tags'] as $t): ?>
-      <div class="tag" data-text="<?=htmlspecialchars($t)?>"><?=htmlspecialchars($t)?></div>
-      <?php endforeach; ?>
-    </div>
+            <div class="tag" data-text="Fast Learner">Fast Learner</div>
+            <div class="tag" data-text="Active Listening">Active Listening</div>
+            <div class="tag" data-text="Teamwork">Teamwork</div>
+            <div class="tag" data-text="Customer Empathy">Customer Empathy</div>
+            <div class="tag" data-text="REST APIs">REST APIs</div>
+            <div class="tag" data-text="Time Management">Time Management</div>
+            <div class="tag" data-text="Adaptability">Adaptability</div>
+            <div class="tag" data-text="Logical Thinking">Logical Thinking</div>
+            <div class="tag" data-text="Arduino">Arduino</div>
+            <div class="tag" data-text="React Native">React Native</div>
+          </div>
   </section>
 
   <div class="fancy-div"><div class="fd-line"></div><div class="fd-icon">// EXPERIENCE //</div><div class="fd-line"></div></div>
@@ -498,22 +596,21 @@ body::before{content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;
       <span class="sec-title">EXPERIENCE</span>
       <div class="sec-line"></div>
     </div>
-    <?php foreach($cv['experience'] as $j): ?>
-    <div class="exp-card corner-box">
+        <div class="exp-card corner-box">
       <div class="exp-card-bg"></div>
       <div class="exp-head">
-        <span class="exp-role glitch" data-text="<?=htmlspecialchars($j['role'])?>"><?=htmlspecialchars($j['role'])?></span>
-        <span class="exp-badge"><?=htmlspecialchars($j['period'])?></span>
+        <span class="exp-role glitch" data-text="Freelance Web Developer">Freelance Web Developer</span>
+        <span class="exp-badge">2024 – Present</span>
       </div>
-      <div class="exp-co">◈ <?=htmlspecialchars($j['company'])?></div>
+      <div class="exp-co">◈ Self-Employed</div>
       <ul class="exp-list">
-        <?php foreach($j['points'] as $p): ?>
-        <li><?=htmlspecialchars($p)?></li>
-        <?php endforeach; ?>
-      </ul>
+                <li>Built production-grade apps with PHP, Laravel &amp; React</li>
+                <li>Designed pixel-perfect UIs with modern CSS &amp; JavaScript</li>
+                <li>Integrated MySQL databases and RESTful APIs</li>
+                <li>Deployed projects on cloud VPS environments</li>
+              </ul>
     </div>
-    <?php endforeach; ?>
-  </section>
+      </section>
 
   <div class="fancy-div"><div class="fd-line"></div><div class="fd-icon">// EDUCATION //</div><div class="fd-line"></div></div>
 
@@ -524,19 +621,17 @@ body::before{content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;
       <span class="sec-title">EDUCATION</span>
       <div class="sec-line"></div>
     </div>
-    <?php foreach($cv['education'] as $e): ?>
-    <div class="edu-card corner-box">
+        <div class="edu-card corner-box">
       <div>
-        <div class="edu-deg"><?=htmlspecialchars($e['degree'])?></div>
-        <div class="edu-school"><?=htmlspecialchars($e['school'])?></div>
+        <div class="edu-deg">High School Diploma (In Progress)</div>
+        <div class="edu-school">Brilliance American School</div>
       </div>
       <div class="edu-right">
-        <div class="edu-note"><?=htmlspecialchars($e['note'])?></div>
-        <div class="edu-period"><?=htmlspecialchars($e['period'])?></div>
+        <div class="edu-note">SAT: 820 · ACT Trials in Progress</div>
+        <div class="edu-period">2023–Present</div>
       </div>
     </div>
-    <?php endforeach; ?>
-  </section>
+      </section>
 
   <!-- LANGUAGES -->
   <section class="sec" data-d="300">
@@ -546,18 +641,25 @@ body::before{content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;
       <div class="sec-line"></div>
     </div>
     <div class="lang-grid">
-      <?php foreach($cv['langs'] as $l): ?>
-      <div class="lang-card corner-box" style="--lc:<?=$l['c']?>">
-        <div class="lang-ring" style="border-color:<?=$l['c']?>"></div>
-        <div class="lang-name"><?=htmlspecialchars($l['l'])?></div>
-        <div class="lang-lv" style="color:<?=$l['c']?>"><?=htmlspecialchars($l['lv'])?></div>
+            <div class="lang-card corner-box" style="--lc:#7c6dfa">
+        <div class="lang-ring" style="border-color:#7c6dfa"></div>
+        <div class="lang-name">Arabic</div>
+        <div class="lang-lv" style="color:#7c6dfa">Native</div>
         <div class="lang-bar-wrap">
-          <div class="lang-bar" data-pct="<?=$l['p']?>" style="background:<?=$l['c']?>;box-shadow:0 0 10px <?=$l['c']?>"></div>
+          <div class="lang-bar" data-pct="100" style="background:#7c6dfa;box-shadow:0 0 10px #7c6dfa"></div>
         </div>
-        <div class="lang-pct" style="color:<?=$l['c']?>"><?=$l['p']?>%</div>
+        <div class="lang-pct" style="color:#7c6dfa">100%</div>
       </div>
-      <?php endforeach; ?>
-    </div>
+            <div class="lang-card corner-box" style="--lc:#00ffe7">
+        <div class="lang-ring" style="border-color:#00ffe7"></div>
+        <div class="lang-name">English</div>
+        <div class="lang-lv" style="color:#00ffe7">Professional</div>
+        <div class="lang-bar-wrap">
+          <div class="lang-bar" data-pct="85" style="background:#00ffe7;box-shadow:0 0 10px #00ffe7"></div>
+        </div>
+        <div class="lang-pct" style="color:#00ffe7">85%</div>
+      </div>
+          </div>
   </section>
 
 </div><!-- /wrap -->
