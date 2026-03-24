@@ -725,7 +725,7 @@ document.querySelectorAll('.cpill').forEach(pill=>{
   });
 
   // PILL click ripple
-  pill.addEventListener('click',e=>{
+  pill.addEventListener('click',e=>{`
     const rect=pill.getBoundingClientRect();
     const x=e.clientX-rect.left,y=e.clientY-rect.top;
     const rp=document.createElement('span');
